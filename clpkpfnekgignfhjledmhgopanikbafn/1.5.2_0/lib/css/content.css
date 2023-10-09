@@ -1,0 +1,280 @@
+.row-inf{
+	display: flex;
+    margin: 16px 12px -14px 8px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.grid-item {
+    width: 32.8%;
+    padding: 0px 10px;
+}
+.hidvisible{
+	display: none !important;
+}
+.allmenu {
+	/* position: relative; */
+	display: inline-block;
+	font-family: 'League Spartan', sans-serif;
+  }
+  
+  .itemsvisible {
+	text-decoration: none;
+	color: black;
+  }
+  
+  .divselected {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	/* float: right; */
+  }
+  
+  .icon {
+	width: 16px;
+	height: 16px;
+  }
+
+  .menu {
+	 display: none; 
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+	position: absolute;
+	/* top: 100%; */
+	/* left: 60%; */
+	/* top: 20px;
+	left: 50%; */
+	/* transform: translateX(-50%); */
+	z-index: 1;
+	width: 125px;
+	background-color: rgb(253, 227, 59);
+	color: black;
+	cursor: pointer;
+	margin: 0;
+	list-style: none;
+	padding: 7px;
+	transition: all 0.2s ease 0s;
+	border-radius: 6px;
+	margin-top: 10px;
+  }
+   .menu-open{
+		 display: block;
+		 z-index: 9999;
+
+  } 
+  .divselected {
+	margin-bottom: 10px;
+  }
+  
+  .menu.show {
+	display: block;
+  }
+  
+  .item {
+	/* list-style: none;
+	display: inline-block; */
+	list-style: none;
+	padding: 0 0px;
+	border-bottom: 0.5px solid black;
+  }
+  
+  .divlinks {
+	text-decoration: none;
+	color: black;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 25px;
+	/* border-bottom: none; */
+  }
+  
+  .menu :last-child {
+	border-bottom-style: hidden;
+  }
+  
+
+
+
+
+.fruitDetails {
+	border-style: solid;
+	font-size: 1px;
+	line-height: normal;
+	direction: ltr;
+	font-size: 16px !important;
+	line-height: 24px !important;
+	height: unset;
+	padding: 10px 8px;
+	border: 8px solid #FFDE59;
+	background-color: white;
+}
+
+.fruitDetails span[id]{
+	font-weight: bold;
+}
+
+.a-carousel-viewport .a-carousel-card{
+	min-width: 280px!important ;
+}
+
+.a-carousel-viewport{
+	height: unset!important;
+}
+
+.Fruit_product_div .ff-part{
+	display: inline-block;
+	width: 24%;
+	vertical-align: top;
+}
+
+.Fruit_product_div .ff-part1{
+	width: 20%;
+}
+
+.Fruit_product_div .ff-part2{
+	width: 20%;
+}
+
+.Fruit_product_div .ff-part3{
+	width: 45%;
+}
+
+.Fruit_product_div .ff-part4 {
+	width: 10%;
+}
+
+.Fruit_product_div .ff-part5 {
+	width: 10%;
+	display: none;
+}
+
+.Fruit_product_div .ff-part *{
+	padding: 0px!important;
+	margin: 0px!important;
+}
+
+.Fruit_product_div{
+	/* max-width: 800px !important; */
+}
+
+.FruitDiv{
+	/* max-width: 280px; */
+	z-index: 999;
+}
+
+#copyASIN_Tooltip div{
+	font-weight: bold;
+}
+
+#copyASIN_Tooltip{
+	background-color: rgb(99,99,99);
+	padding: 5px 10px;
+	position: absolute;
+	display: block;
+	color: #fff;
+	left: -50 px;
+	top:-30 px ;
+}
+
+
+#ff-asin{
+	/* position: relative; */
+}
+
+/* ----- */
+.fruit-infos {
+	font-size:11px!important
+}
+
+#card_title {
+	text-align: center;
+	border-bottom: 1px solid #D9D6CD;
+	margin-bottom: 10px;
+}
+
+#card_asin_container,
+#card_rating_container,
+#card_video_carousel,
+#card_low_stock,
+#card_commission_percentage,
+#card_commission_dollar,
+#card_bsr,
+#card_sponsored,
+#card_first_available,
+#card_affiliate_commision,
+#card_affiliate_dollar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #F7F7F7;
+	border-radius: 4px;
+	margin-bottom: 8px;
+}
+
+#ff-videoAvailable,
+#ff-isSponsored {
+	width: 14px;
+	height: 14px;
+}
+
+#ff-BSR {
+	text-align: right;
+	padding-left: 20px;
+}
+
+#card_video_carousel_list li {
+	font-weight: 100;
+	margin-left: -5px;
+	padding-left: 3px;
+}
+
+#card_video_carousel_list li::marker {
+	font-size: 6px;
+}
+
+#card_bsr span a {
+	color: #239BE2
+}
+
+.item1 { grid-area: item1; }
+.item2 { grid-area: item2; }
+.item3 { grid-area: item3; }
+.item4 { grid-area: item4; }
+.item5 { grid-area: item5; }
+.item6 { grid-area: item6; }
+.item7 { grid-area: item7; }
+.item8 { grid-area: item8; }
+.item9 { grid-area: item9; }
+.item10 { grid-area: item10; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas:
+	'item1 item2 item3'
+    'item4 item5 item6'
+    'item7 item8 item9'
+    'item10 item11 item9';
+  margin: 16px 12px -14px 8px;
+}
+
+.grid-container > div {
+	margin: 0px 6px 0px 8px;
+	padding: 2px 10px
+}
+
+.grid-cont > div{
+	border: solid 2px rgb(247, 247, 247)!important;
+    background: white!important;
+    font-size: 13px!important;
+}
+.crossed{
+	text-decoration: line-through !important;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loadingImage {
+    animation: spin 2s linear infinite;
+}

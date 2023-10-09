@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="container" id="container" style="margin-top: -30px">
+  <head>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=League+Spartan:300,400,400i,600,700,800,900" />
+    <link rel="stylesheet" href="../css/popup.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <title>Fluencer Fruit</title>
+    <style>
+      *{
+				font-family: 'League Spartan';
+			}
+    </style>
+  </head>
+
+  <body>
+
+    <div class="form-container sign-up-container">
+      <form action="#">
+        <h1>Create Account</h1>
+      
+        <input type="text" id ="name" placeholder="Name" />
+        <input type="email" id ="email"  placeholder="Email" />
+        <input type="password" id ="password"  placeholder="Password" />
+        <button id="signUpBtn">Sign Up</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form action="#">
+        <h1>Sign in</h1>
+      
+        <span>Welcome Back</span>
+        <input type="email" placeholder="Email" id="login_email" />
+        <input type="password" placeholder="Password" id ="login_password"/>
+        <a href="#" id = "fogetPassword_btn">Forgot your password?</a>
+        <button id = "signInBtn">Sign In</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p style="font-weight: bold;">Log in with your email address</p>
+          <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, Friend!</h1>
+          <p style="font-weight: bold;">Sign up with your email address and start picking better products with us!</p>
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+  </body>
+</html>

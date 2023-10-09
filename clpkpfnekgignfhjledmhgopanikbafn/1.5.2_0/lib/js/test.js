@@ -1,0 +1,1 @@
+function gfvc(){console.log("This is gfvc")}gfvc();

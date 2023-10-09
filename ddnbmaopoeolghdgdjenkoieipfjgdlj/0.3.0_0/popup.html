@@ -1,0 +1,248 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @font-face {
+        font-family: "Amazon Ember";
+        src: url("./AmazonEmber_Rg.ttf");
+      }
+      body {
+        min-width: 230px;
+        padding: 12px;
+        margin: 0;
+        font-family: "Amazon Ember";
+        font-size: 13px;
+      }
+      body * {
+        font-family: inherit;
+      }
+
+      header {
+        margin: -12px -12px 12px -12px;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border-bottom: 1px solid #d5d9d9;
+        background-color: #f0f2f2;
+      }
+
+      .settings-icon {
+        width: 16px;
+        height: 16px;
+        margin-left: auto;
+        cursor: pointer;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .input-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        gap: 4px;
+      }
+      .input-container > span {
+        font-weight: 700;
+      }
+      .button-container {
+        display: flex;
+        gap: 12px;
+      }
+      button {
+        border: none;
+        color: #111;
+        font-size: 13px;
+        line-height: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+        height: 29px;
+        flex-grow: 1;
+        cursor: pointer;
+      }
+      .primary-button {
+        background: #ffd814;
+      }
+      .primary-button:hover {
+        background: #f7ca00;
+        box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+      }
+      .primary-button:disabled {
+        background-color: #edeff2;
+        cursor: not-allowed;
+      }
+      .secondary-button {
+        background: #fff;
+        border-color: #d5d9d9;
+        border-style: solid;
+        border-width: 1px;
+      }
+      .secondary-button:hover {
+        background-color: #f7fafa;
+        box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+      }
+      .secondary-button:disabled {
+        background-color: #edeff2;
+        cursor: not-allowed;
+      }
+      .input-field {
+        background-color: #fff;
+        height: 31px;
+        padding: 3px 7px;
+        line-height: normal;
+        border: 1px solid #888c8c;
+        border-radius: 3px;
+        box-shadow: 0 1px 2px rgb(15 17 17 / 15%) inset;
+        outline: 0;
+      }
+      .input-field:focus {
+        background-color: #f7feff;
+        border-color: #007185;
+        box-shadow: 0 0 0 3px #c8f3fa, 0 1px 2px rgb(15 17 17 / 15%) inset;
+      }
+      .input-field:disabled {
+        background-color: #edeff2;
+        border-color: #edeff2;
+        cursor: not-allowed;
+      }
+      .message {
+        padding: 8px;
+        font-style: italic;
+        background-color: #f4f6f6;
+      }
+      .selected-period-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .period-checkbox-container {
+        display: flex;
+        align-items: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: #007185;
+        width: fit-content;
+      }
+      a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        color: #c7511f;
+      }
+
+      @keyframes rotate-indeterminate {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes dash-indeterminate {
+        0% {
+          stroke-dasharray: 1, 88;
+        }
+
+        50% {
+          stroke-dasharray: 88, 88;
+          stroke-dashoffset: -22;
+        }
+
+        100% {
+          stroke-dasharray: 88, 88;
+          stroke-dashoffset: -88;
+        }
+      }
+      #loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 64px;
+        overflow: hidden;
+        padding-block: 17px;
+      }
+      #loader svg {
+        width: 100%;
+        height: 100%;
+        animation: rotate-indeterminate 2s linear infinite;
+      }
+      #loader .track {
+        stroke: #c7ccd1;
+        fill: none;
+        stroke-width: 3.2;
+      }
+      #loader .fill {
+        animation: dash-indeterminate 1.5s ease-in-out infinite;
+        stroke: #008ae0;
+        fill: none;
+        stroke-width: 3.2;
+      }
+    </style>
+    <script defer src="popup.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="/icons/16x16.png" style="width: 16px" alt="" />
+      <span>Amazon Influencer Toolkit</span>
+      <img src="/icons/settings.svg" class="settings-icon" alt="Settings icon" />
+    </header>
+    <div class="content" id="main">
+      <label class="input-container">
+        <span>Max number of items:</span>
+        <input class="input-field" type="number" id="max-count" min="1" step="1" value="9999" />
+      </label>
+      <div class="selected-period-container">
+        <label class="period-checkbox-container" title="Only available for premium members">
+          <input type="checkbox" disabled />
+          <span>Get reviews from selected period</span></label
+        >
+        <input
+          class="input-field"
+          type="number"
+          id="period"
+          min="1"
+          max="30"
+          step="1"
+          value="10"
+          style="display: none"
+        />
+      </div>
+      <button class="primary-button" disabled id="start-stop">Start</button>
+      <div id="main-message" class="message">
+        Sorry but current page is not supported or there is no items. Currently we only support search, your orders,
+        cart and top selling items pages.
+      </div>
+      <a
+        id="get-premium"
+        href="https://vilkazdev.gumroad.com/l/amazon-influencers-toolkit"
+        target="_blank"
+        style="display: none"
+        >Get Premium access!</a
+      >
+    </div>
+    <div class="content" id="license" style="display: none">
+      <label class="input-container">
+        <span>License key:</span>
+        <input class="input-field" id="license-key" />
+      </label>
+      <a href="https://vilkazdev.gumroad.com/l/amazon-influencers-toolkit" target="_blank">Get a license key</a>
+      <div class="button-container">
+        <button class="primary-button" id="enter-license">Enter</button>
+        <button class="secondary-button" id="cancel-license">Cancel</button>
+      </div>
+      <div id="license-message" class="message" style="display: none">
+        There was a problem while checking your license key. It might be invalid or there is a problem with the server.
+      </div>
+    </div>
+    <div id="loader" style="display: none">
+      <svg class="iui-radial" viewBox="0 0 32 32" aria-hidden="true">
+        <circle class="track" cx="16" cy="16" r="14"></circle>
+        <circle class="fill" cx="16" cy="16" r="14" style="stroke-dashoffset: 44"></circle>
+      </svg>
+    </div>
+  </body>
+</html>

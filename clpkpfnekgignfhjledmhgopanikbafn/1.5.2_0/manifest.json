@@ -1,0 +1,30 @@
+{
+   "action": {
+   },
+   "background": {
+      "service_worker": "./lib/js/background.js"
+   },
+   "content_scripts": [ {
+      "css": [ "./lib/css/content.css" ],
+      "js": [ "./lib/js/content.js" ],
+      "matches": [ "https://www.amazon.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Optimize product research selection and management for your Amazon Influencer business.",
+   "host_permissions": [ "https://*.amazon.com/*", "https://extension.fluencerfruit.com/*" ],
+   "icons": {
+      "128": "./lib/assets/banana.png",
+      "16": "./lib/assets/banana.png",
+      "48": "./lib/assets/banana.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq80lFXY7VB7cNt6yJWwPtYR8ZSm+DfPF6gECdBiCfbdr2By2YuCxj8cVY2rKcKmi3wim7nnp8wJk2k0Bv1s56UWb1JobgrH5lA9T3OH5/ve3zPqCrwLb+wDZr2NESa7xCf8dVyyd1wlJQBmpb5MXy4QQt17PiOXnMq68hAKBhVfNU2X7wo1bOMPLahibfmkF6g+GCMdAFkWgGY+U9ptjWBL/z7VxpIpXjAp5jrnXVtMZjYAGDXu16LN/bu5hWa+rpRYAO6kP68NXF8tnUZdAkER/pvy7BBw5AnpMPoowg40A6baZ4jdS7XCV/nwgEHm5pRR7d4ysu/ybs3T0ppNwWQIDAQAB",
+   "manifest_version": 3,
+   "name": "Fluencer Fruit for Influencers",
+   "permissions": [ "tabs", "storage", "activeTab", "scripting" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5.2",
+   "web_accessible_resources": [ {
+      "matches": [ "https://*.amazon.com/*", "https://*/*", "http://*/*" ],
+      "resources": [ "lib/assets/banana.png", "lib/assets/check-icon.svg", "lib/assets/x-icon.svg", "lib/assets/close.svg", "lib/html/table.html", "lib/assets/column-icon.png" ]
+   } ]
+}

@@ -1,0 +1,25 @@
+table .even{
+    background-color: #F7F7F7;
+}
+
+table .odd{
+    background-color: #ffffff;
+}
+
+.dataTables_paginate{
+    color:black
+}
+#DataTables_Table_0_info{
+    display: none;
+}
+
+.dataTables_wrapper {
+    overflow-y: auto;
+    max-height: 367px;
+}
+
+.logout {
+    padding: 5px;
+    font-weight: bold;
+    height: 20px;
+  }

@@ -1,0 +1,1 @@
+let a=!1;!async function(){var e=(await chrome.storage.local.get("isLoggedIn"))["isLoggedIn"];e&&(0==(e=await chrome.runtime.sendMessage({type:"check"})).isSuccess?await chrome.storage.local.remove("isLoggedIn"):!0===e?.isSubscribed&&(dataAuth=e,0==a)&&(a=!0,setTimeout(function(){a=!1},1e3)))}();

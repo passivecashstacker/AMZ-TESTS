@@ -1,0 +1,42 @@
+.dollar{
+    position: relative;
+    color:white
+}
+
+.dollar::after{    
+    content: "$";
+    position: absolute;
+    color: gainsboro;
+    top: 28px;
+    left: 25px;
+    font-size: 15px;
+}
+.dollar.grayDollar::after{  
+    color: gray;
+}
+.dollar.halfDiv::after{
+    top: 27px;
+    left: 0px;
+}
+.dollar P {
+    margin:0px
+}
+.dollar.halfDiv input{
+    margin-bottom: 10px;
+}
+.form-v10-content .form-detail .form-row {
+    padding-left: 25px;
+    padding-right: 15px;
+}
+.form-detail,.form-v10-content,.page-content{
+    border-radius: 0px;
+}
+.form-left {
+    width: 65%!important;
+}
+.form-row {
+     margin-bottom: 17px!important;
+}
+
+
+     

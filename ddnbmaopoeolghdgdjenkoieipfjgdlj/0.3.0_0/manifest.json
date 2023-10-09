@@ -1,0 +1,30 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "icons/16x16.png",
+         "32": "icons/32x32.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Amazon influencer toolkit"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches": [ "https://www.amazon.com/*", "https://www.amazon.de/*", "https://www.amazon.es/*", "https://www.amazon.fr/*", "https://www.amazon.it/*", "https://www.amazon.nl/*", "https://www.amazon.se/*", "https://www.amazon.co.uk/*" ]
+   } ],
+   "description": "Helps you find the best item to make a review video.",
+   "host_permissions": [ "https://www.amazon.com/*", "https://www.amazon.de/*", "https://www.amazon.es/*", "https://www.amazon.fr/*", "https://www.amazon.it/*", "https://www.amazon.nl/*", "https://www.amazon.se/*", "https://www.amazon.co.uk/*" ],
+   "icons": {
+      "128": "icons/128x128.png",
+      "16": "icons/16x16.png",
+      "48": "icons/48x48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkTsAJvj9VbNNYbCy8eorThruSVwJgJ5Wmut6o9CaWYcsm+qmbaC77aXlnZncdMigcUjLYCDc3M0CIXbWCofGfXiyZevRMclQ96vYQQxZ71PV8LnVUiY6xzYk2OEMbPwtiDzAt36LKYpX+O//WiNDO+rfjuKb8emAcQALlnN2qmm2eU+m4CPm/UsmZ6q42Iy191rIFhTPRMq/NI/CcwinSvGkPSHpDzVqxqcllA0vAW39nYPkXtyOkRL0chjO4vFh+y/JdcpPBh8z2rnGbBkQZBHwVKLWkzFllhpDtH1jE3cryPcfjT0j5kNmPJAIqYw0G3g7mzQV1/TDSmnXa8E5TQIDAQAB",
+   "manifest_version": 3,
+   "name": "Amazon Influencer Toolkit",
+   "permissions": [ "storage", "tabs", "activeTab" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.3.0"
+}

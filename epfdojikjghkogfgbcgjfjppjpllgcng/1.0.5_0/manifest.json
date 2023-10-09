@@ -1,0 +1,28 @@
+{
+   "action": {
+      "default_icon": "/assets/img/icon.png",
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "background.bundle.js"
+   },
+   "content_scripts": [ {
+      "css": [ "content.styles.css" ],
+      "js": [ "/assets/dist/js/jquery.min.js", "contentScript.bundle.js" ],
+      "matches": [ "https://www.amazon.com/*" ]
+   } ],
+   "description": "Provides users with a variety of data related to Amazon products, such as product pricing, reviews, ratings, and sales rank.",
+   "icons": {
+      "128": "/assets/img/icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA119jikgXtSHrQL1oGABTTQAtlsROO6A1PHqqlY93JfoEbFF/HKzpBQTjK+CquYpmgW1y0wwvIGKcEQpwwE0Pv+3dJNivWLTmKoyVHoHX2rEsKkZUs2pL/IYN6tzXHBTMPfn3qdQNyJVtcHMZ2kEfnZv9oLHu6NaONpAexv90rL4KuIjQ274bsjEztdGRsReDZYkag6WhvEsafyB9grXE2r+nEJZiH3wrlTmPStJpcLX7wncfMtz9tSSna44T84BF1+2+dKg1rsBuLfAlka+pcBYgO9WAiuxFx2eR9jKmwOdeR17QRSwoTZBS8oPxmO+72DP2iOuv5RUCHyAr8xQ2KQIDAQAB",
+   "manifest_version": 3,
+   "name": "Knoxify - Amazon Influencer Growth Tool",
+   "permissions": [ "storage", "unlimitedStorage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.5",
+   "web_accessible_resources": [ {
+      "matches": [  ],
+      "resources": [ "content.styles.css", "/assets/img/icon.png" ]
+   } ]
+}

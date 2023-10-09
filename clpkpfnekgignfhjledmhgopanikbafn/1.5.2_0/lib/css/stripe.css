@@ -1,0 +1,172 @@
+
+.card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 290px;
+    padding: 20px 1px;
+    margin: 10px 0;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgb(253, 227, 59);
+    margin-left: 10px;
+}
+  .content {
+    padding: 0px;
+  }
+  .content .price {
+    color: white;
+    font-weight: 800;
+    font-size: 50px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+  }
+  
+  .content .description {
+    color:black;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .content .title {
+    font-weight: 800;
+    text-transform: uppercase;
+    color:black;
+    margin-top: 10px;
+    font-size: 25px;
+    letter-spacing: 1px;
+  }
+  
+.btn_card{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: none;
+    outline: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .75rem;
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 90%;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  
+
+  .etiquet-price {
+    position: relative;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .etiquet-price p {
+          align-items: center;
+          margin-bottom: 10px;
+          justify-content: space-around;
+          font-size: 30px;
+  }
+  
+  .etiquet-pricee p:before {
+    margin-right: 5px;
+    font-size: 25px;
+    font-weight: 300;
+  }
+  .etiquet-pricee {
+    position: relative;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .etiquet-pricee p {
+
+          align-items: center;
+          margin-bottom: 10px;
+          justify-content: space-around;
+          font-size: 30px;
+  }
+  
+  .etiquet-price p:before {
+    margin-right: 5px;
+    font-size: 25px;
+    font-weight: 300;
+  }
+  
+  .etiquet-price p:after {
+    content: "/ Monthly";
+    margin-left: 5px;
+    font-size: 22px;
+   
+  }
+  .etiquet-pricee p:after {
+    content: "/ Quarterly ";
+    margin-left: 5px;
+    font-size: 22px;
+   
+  }
+  .etiquet-priceee p:after {
+    content: "/ Annual ";
+    margin-left: 5px;
+    font-size: 22px;
+   
+  }
+  .etiquet-priceee {
+    position: relative;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .etiquet-priceee p {
+
+          align-items: center;
+          margin-bottom: 10px;
+          justify-content: space-around;
+          font-size: 30px;
+  }
+  
+  .etiquet-priceee p:before {
+    margin-right: 5px;
+    font-size: 25px;
+    font-weight: 300;
+  }
+  
+  .benefits-list {
+    margin-top: 16px;
+  }
+  
+  .benefits-list ul {
+    padding: 0px;
+    font-size: 20px;
+    padding-left: 50px;
+  }
+  
+  .benefits-list ul li {
+    color: #4d4d4d;
+    list-style: none;
+    margin-bottom: .2rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  
+  .benefits-list ul li svg {
+    width: .9rem;
+    fill: currentColor;
+  }
+  
+  .benefits-list ul li span {
+    font-weight: 300;
+  }
+  
+  .logout{
+    padding: 5px;
+    font-weight: bold;
+    height: 20px;
+  }
+  .clicked {
+    color: black;
+    text-decoration: none;
+  }
+.clicked:hover{
+  color: rgb(253, 227, 59);
+}
+  

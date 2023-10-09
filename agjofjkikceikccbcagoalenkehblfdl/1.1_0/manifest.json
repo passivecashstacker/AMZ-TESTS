@@ -1,0 +1,14 @@
+{
+   "action": {
+      "default_popup": "popup.html"
+   },
+   "icons": {
+      "128": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApU5R0OKDVEoV0vplP1Ol3XnQtiNctUry+oe6GC6tcnIpdDz6+KE5Ejna+7ymZODZ9ti65Iq9Axa7Rgtq8PLH1qX56YlLNMkz2kdb9LTyUeoNP+waWJPwY4Pxf/lAT8LX2tnnXlxgiP6w7JqdxUekeVTaSkWAv4QrFXT/oHFAbIQJWd8/hRpTa204V6l1tvly/QGVRnsBvUlcfVs8wDc5sdSkmd6LDsWLfcYIsCPh/k0+L/Jq3JaqN9IhZ4bZsPM5zyi8mycy2jfmM5BFbbWpou6iXOdBqQD22V2YMXPhPdYarTPcDYAN2kK0iRehlJkqVlyN9sZa0H+EWTCcz6c6yQIDAQAB",
+   "manifest_version": 3,
+   "name": "CommissionCheck for Amazon Influencers",
+   "permissions": [ "activeTab" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.01"
+}
