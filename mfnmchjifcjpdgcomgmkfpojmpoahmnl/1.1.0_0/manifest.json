@@ -1,0 +1,38 @@
+{
+   "action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html",
+      "default_title": "Sortio"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "css": [ "content.css", "dataTables.min.css", "scroller.dataTables.min.css" ],
+      "js": [ "content.js", "jquery.min.js", "notify.min.js", "jquery-ui.min.js" ],
+      "matches": [ "https://*.amazon.com/*" ],
+      "runAt": "document_start"
+   }, {
+      "css": [ "content.css" ],
+      "js": [ "creatorhub.js" ],
+      "matches": [ "https://*.amazon.com/creatorhub/*" ],
+      "runAt": "document_start"
+   } ],
+   "description": "Maximize Productivity for Amazon Influencers",
+   "host_permissions": [ "https://*.amazon.com/*", "https://sortiox.com/*" ],
+   "icons": {
+      "128": "icon.png",
+      "16": "icon.png",
+      "48": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnnhHCGYmBfFLj7lKBe5SLqQejmXsfCkqUQpcv8oM05qz70FjsFDAUG69i1jNLqjbK4T8uRaZX7veohziJ3Odzm3AR6IWMBSuNlcqG9ziWXoKyxfpR1KWFEDwRt95a9JnGG7LbhJWpbl0FcBEBuvmmgUTFX6D/FEfn2m4SAfR7ecjZS2Bd3NnqluERocCPpJ0T/zwBHT0j+gBEyJKL7mufSQb2woMfyfb5vpDHHBz9FDmlqE5tdg06guIJdaxxAATJYyFcCLUbWzEfXwDQeG9xkY72nebPzMTVxrPi2zt1ChwEHUPzbbfiUskE0BY92UgoCfFsvfLy6jeGV7qQv5PnQIDAQAB",
+   "manifest_version": 3,
+   "name": "SortioX",
+   "permissions": [ "storage", "unlimitedStorage", "alarms" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.0",
+   "web_accessible_resources": [ {
+      "matches": [ "https://*.amazon.com/*" ],
+      "resources": [ "vcard.html", "hcard.html", "filter.html", "table.html", "column-filter.html", "icon.png" ]
+   } ]
+}
